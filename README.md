@@ -25,3 +25,7 @@ I've seen other folk write a network traffic sniffer to achieve the same results
 The UdpBroadcaster code could still forward the received packet to Weather Undergroun, but I've simply not writtend the code to do that yet.
 
 ![](https://github.com/wicked-rainman/wicked-rainman.github.io/blob/master/pictures/wstack.png "Just look at those lovely colours!")
+
+Here's a picture of the udpCursesClient.c runnning under Ubuntu:
+
+![](https://github.com/wicked-rainman/wicked-rainman.github.io/blob/master/pictures/udplisten.png "Just look at those lovely colours!")
