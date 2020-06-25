@@ -12,7 +12,7 @@ I have a few Raspberry Pis that are on my network all the time, so I wrote a sim
 from the station, extracts out all the weather values and then re-sends this sanitised data as a broadcast udp packet. This allows me to 
 view the data on as many  devices as I like, provided they areconnected to my local network.
 
-The code to do this (written for a Raspberry pi) is held in file UdpBroadcaster.c. 
+The code to do this (written for a Raspberry pi) is held in file UdpBroadcaster.c. I run it as a demon service using systemctl.
 
 I've written some client code for an M5Stack (M5StackUdpClient.ino), a simple Unix terminal client (simpleUdpClient.c) and a Unix curses version (udpCursesClient.c).
 
@@ -26,6 +26,6 @@ The UdpBroadcaster code could still forward the received packet to Weather Under
 
 ![](https://github.com/wicked-rainman/wicked-rainman.github.io/blob/master/pictures/wstack.png "Just look at those lovely colours!")
 
-Here's a picture of the udpCursesClient.c runnning under Ubuntu. The progress bar along the bottom makes it easy to see if it's receiving packets.
+Here's a picture of the udpCursesClient.c runnning under Ubuntu. The progress bar along the bottom makes it easy to see if it's still receiving packets from the UdpBroadcaster.
 
 ![](https://github.com/wicked-rainman/wicked-rainman.github.io/blob/master/pictures/udplisten.png "Just look at those lovely colours!")
