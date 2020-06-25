@@ -20,4 +20,8 @@ In the rpi directory you'll find a sockets based client for a Raspberry Pi that 
 
 The picture below shows the client running on an M5Stack Fire. The bargrap at the top shows the humidity and the yellow block right at the bottom moves each time an update is received.... Obviously, with a small screen only some of the weather values are being displayed.
 
+I've seen other folk write a network traffic sniffer to achieve the same results - but I think this is a more simple approach. 
+
+The UdpBroadcaster code could still forward the received packet to Weather Undergroun, but I've simply not writtend the code to do that yet.
+
 ![](https://github.com/wicked-rainman/wicked-rainman.github.io/blob/master/pictures/wstack.png "Just look at those lovely colours!")
