@@ -18,4 +18,5 @@ I've written some client code for an M5Stack (M5StackUdpClient.ino), a simple Un
 
 In the rpi directory you'll find a sockets based client for a Raspberry Pi that reads and translates the get request directly from the weather station and displays it on a dot-matrix display. It works well, but I've abandoned the idea because it only allows for one client display at any one time.
 
+The picture below shows the client running on an M5Stack Fire. 
 ![](https://github.com/wicked-rainman/wicked-rainman.github.io/blob/master/pictures/wstack.png "Just look at those lovely colours!")
