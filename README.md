@@ -26,6 +26,6 @@ The UdpBroadcaster code could still forward the received packet to Weather Under
 
 ![](https://github.com/wicked-rainman/wicked-rainman.github.io/blob/master/pictures/wstack.png "Just look at those lovely colours!")
 
-Here's a picture of the udpCursesClient.c runnning under Ubuntu:
+Here's a picture of the udpCursesClient.c runnning under Ubuntu. The progress bar along the bottom makes it easy to see if it's receiving packets.
 
 ![](https://github.com/wicked-rainman/wicked-rainman.github.io/blob/master/pictures/udplisten.png "Just look at those lovely colours!")
