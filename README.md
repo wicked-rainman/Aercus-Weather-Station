@@ -1,5 +1,8 @@
 
 # The Aercus weather station
+![](https://github.com/wicked-rainman/wicked-rainman.github.io/blob/master/pictures/aercus.png "LEDs galore!")
+
+
 
 A few years ago, my wife bought me an Aercus weather station. It's sat there for a few years, sending it's readings to Weather Underground without fault.
 
