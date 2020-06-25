@@ -16,4 +16,6 @@ The code to do this (written for a Raspberry pi) is held in file UdpBroadcaster.
 
 I've written some client code for an M5Stack (M5StackUdpClient.ino), a simple Unix terminal client (simpleUdpClient.c) and a Unix curses version (udpCursesClient.c).
 
+In the rpi directory you'll find a sockets based client for a Raspberry Pi that reads and translates the get request directly from the weather station and displays it on a dot-matrix display. It works well, but I've abandoned the idea because it only allows for one client display at any one time.
+
 ![](https://github.com/wicked-rainman/wicked-rainman.github.io/blob/master/pictures/wstack.png "Just look at those lovely colours!")
