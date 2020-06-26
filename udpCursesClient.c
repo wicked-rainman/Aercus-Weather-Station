@@ -75,7 +75,7 @@ int main(int argc, char *argv[]) {
         init_pair(RED, COLOR_RED, COLOR_BLACK);
         init_pair(YELLOW, COLOR_YELLOW, COLOR_BLACK);
         init_pair(BLUE, COLOR_BLUE, COLOR_BLACK);
-        init_pair(ORANGE,COLOR_CYAN, COLOR_BLACK);
+        init_pair(ORANGE,203, COLOR_BLACK);
         clear();
         packetCount=0;
         while(1) {
