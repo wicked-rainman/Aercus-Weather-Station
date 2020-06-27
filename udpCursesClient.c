@@ -152,6 +152,7 @@ int main(int argc, char *argv[]) {
                         attron(COLOR_PAIR(GREEN));
                         mvaddstr(5,1,names[4]);
                         attron(COLOR_PAIR(WHITE));
+                        sprintf(values[4],"%.1f",(strtof(values[4],NULL)*25.4));
                         mvaddstr(5,15,values[4]);
                         move(6,1);
 
