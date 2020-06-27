@@ -65,7 +65,7 @@ int main(int argc, char *argv[]) {
         extract_values(input_line,"&baromin=","&",RelPress);
         sprintf(RelPress,"%.1f",(strtof(RelPress,NULL)*33.86));
         sprintf(outTemp,"%.1f",(((strtof(outTemp,NULL)-32)/9)*5));
-        sprintf(dailyrainin,"%.1f",(strtof(dailyrainin,NULL)*25.4));
+        //sprintf(dailyrainin,"%.1f",(strtof(dailyrainin,NULL)*25.4)); //Uncomment for mm instead of inches
         sprintf(sendString,"%s,%s,%s,%s,%s", outTemp,outHumi,RelPress,avgwind,dailyrainin);
         sendStringLen=strlen(sendString);
         x=sendto(UDPsock, sendString, sendStringLen, 0, (struct sockaddr *) &broadcastAddr, sizeof(broadcastAddr));
