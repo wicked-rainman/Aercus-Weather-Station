@@ -1,3 +1,3 @@
 
-# The Aercus weather related code
+# Aercus weather station related code
 
