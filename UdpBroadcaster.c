@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <syslog.h>
 #include <errno.h>
+#include <time.h>
 #define SERVER_PORT 8888
 #define UDP_PORT 5678
 #define BROADCAST_IP "192.168.1.255"
@@ -18,7 +19,12 @@ void extract_values(char *, char *, char *, char *);
 
 int main(int argc, char *argv[]) {
         int UDPsock=-1;                   /* Socket FD for UDP broadcast */
-        int sockfd=-1;                    /* Socket FD for weather server listen */
+        int sockfd=-1;                    /* Socket FD for weather server listen */       
+        int StationID=1;
+        int SoftwareVer=2;
+        char TimeStr[100];
+        time_t now;
+        struct tm *tim;
         int client_sock=-1;               /* Socket for weather connect instance */
         struct sockaddr_in client;        /* Weather Stn client */
         struct sockaddr_in broadcastAddr; /* UDP broadcast */
@@ -66,7 +72,12 @@ int main(int argc, char *argv[]) {
         sprintf(RelPress,"%.1f",(strtof(RelPress,NULL)*33.86));
         sprintf(outTemp,"%.1f",(((strtof(outTemp,NULL)-32)/9)*5));
         //sprintf(dailyrainin,"%.1f",(strtof(dailyrainin,NULL)*25.4)); //Uncomment for mm instead of inches
-        sprintf(sendString,"%s,%s,%s,%s,%s", outTemp,outHumi,RelPress,avgwind,dailyrainin);
+               
+        now = time(NULL);
+        tim = localtime(&now);
+        strftime(TimeStr, sizeof(TimeStr)-1,"%Y%m%d%H%M%S",tim);
+
+        sprintf(sendString,"%d,%03d,%s,%s,%s,%s,%s,,%s,,,,,,,,,,",SoftwareVer,StationID,TimeStr,outTemp,outHumi,RelPress,avgwind,dailyrainin);
         sendStringLen=strlen(sendString);
         x=sendto(UDPsock, sendString, sendStringLen, 0, (struct sockaddr *) &broadcastAddr, sizeof(broadcastAddr));
         if(x!=sendStringLen) {
